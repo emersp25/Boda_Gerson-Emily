@@ -1,10 +1,8 @@
 /* ============================================================
    BODA GERSON & EMILY · 09·05·2026
-   script.js v2 — Canvas de partículas, pétalos, slides, formulario
    ============================================================ */
 'use strict';
 
-/* ⚠️  Reemplaza con tu URL de Google Apps Script */
 const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyVjhlEUq7rE6kIEN0abimNN3rW0WZmPgLKiC-lJUa1Kij3KfnAj7CirefAigHiJ1dR/exec';
 
 /* ============================================================
@@ -52,7 +50,7 @@ const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyVjhlEUq7rE6kI
     particles = [];
     for (let i = 0; i < n; i++) {
       const p = new Particle();
-      p.life = Math.random(); // arrancan en fases aleatorias
+      p.life = Math.random();
       particles.push(p);
     }
   }
@@ -371,12 +369,6 @@ async function submit(asiste) {
     return;
   }
 
-  /* Modo desarrollo: simular si no se configuró la URL */
-  if (APPS_SCRIPT_URL === 'PEGA_AQUI_TU_URL_DE_GOOGLE_APPS_SCRIPT') {
-    console.warn('[DEV] URL no configurada — simulando envío.');
-    showSuccess(familia, asiste);
-    return;
-  }
 
   setBtns(true);
   try {
