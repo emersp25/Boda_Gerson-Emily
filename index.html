@@ -11,23 +11,17 @@
 </head>
 <body>
 
-  <!-- Canvas de partículas doradas -->
   <canvas id="particle-canvas"></canvas>
-
-  <!-- Capa de pétalos flotantes SVG -->
   <div class="petals-layer" aria-hidden="true" id="petalsLayer"></div>
 
-  <!-- Viñeta decorativa en las esquinas -->
   <div class="corner corner-tl" aria-hidden="true"></div>
   <div class="corner corner-tr" aria-hidden="true"></div>
   <div class="corner corner-bl" aria-hidden="true"></div>
   <div class="corner corner-br" aria-hidden="true"></div>
 
-  <!-- ── Navegación ── -->
   <button class="nav-btn prev" id="prevBtn" aria-label="Anterior">&#8249;</button>
   <button class="nav-btn next" id="nextBtn" aria-label="Siguiente">&#8250;</button>
 
-  <!-- ── Dots ── -->
   <div class="dots-container">
     <button class="dot active" data-slide="0"></button>
     <button class="dot" data-slide="1"></button>
@@ -51,29 +45,48 @@
           <span class="badge-line"></span>
         </div>
 
-        <div class="rings-deco" aria-hidden="true">
-          <div class="ring ring-outer"></div>
-          <div class="ring ring-inner"></div>
-          <span class="ring-gem">&#10022;</span>
-        </div>
+        <div class="portada-body">
 
-        <h1 class="names">
-          <span class="name-first" data-text="Gerson">Gerson</span>
-          <span class="ampersand">&</span>
-          <span class="name-second" data-text="Emily">Emily</span>
-        </h1>
+          <div class="photo-wrap">
+            <div class="photo-frame-box">
+              <img src="img/Gerson&Emily.jpg" alt="Gerson y Emily" class="couple-photo" loading="eager" />
+              <div class="pf-border"></div>
+              <span class="pf-corner pf-tl"></span>
+              <span class="pf-corner pf-tr"></span>
+              <span class="pf-corner pf-bl"></span>
+              <span class="pf-corner pf-br"></span>
+              <span class="pf-mid pf-top"></span>
+              <span class="pf-mid pf-bottom"></span>
+            </div>
+          </div>
 
-        <div class="divider-fancy" aria-hidden="true">
-          <span class="div-line"></span>
-          <span class="div-diamond">&#9670;</span>
-          <span class="div-line"></span>
-          <span class="div-diamond">&#9670;</span>
-          <span class="div-line"></span>
-        </div>
+          <div class="portada-text">
+            <div class="rings-deco" aria-hidden="true">
+              <div class="ring ring-outer"></div>
+              <div class="ring ring-inner"></div>
+              <span class="ring-gem">&#10022;</span>
+            </div>
 
-        <div class="date-block">
-          <time class="date" datetime="2026-05-09">09 · 05 · 2026</time>
-          <span class="time-text">5:00 pm</span>
+            <h1 class="names">
+              <span class="name-first">Gerson</span>
+              <span class="ampersand">&</span>
+              <span class="name-second">Emily</span>
+            </h1>
+
+            <div class="divider-fancy" aria-hidden="true">
+              <span class="div-line"></span>
+              <span class="div-diamond">&#9670;</span>
+              <span class="div-line"></span>
+              <span class="div-diamond">&#9670;</span>
+              <span class="div-line"></span>
+            </div>
+
+            <div class="date-block">
+              <time class="date" datetime="2026-05-09">09 · 05 · 2026</time>
+              <span class="time-text">3:00 pm</span>
+            </div>
+          </div>
+
         </div>
 
         <p class="scroll-cta">
@@ -117,7 +130,6 @@
       <div class="slide-content location-slide">
 
         <div class="slide-eyebrow">Lugar del Evento</div>
-
         <h2 class="venue-title">Salón de Eventos<br/><em>Marbella</em></h2>
 
         <div class="venue-details">
@@ -131,9 +143,7 @@
           </div>
         </div>
 
-        <a href="https://maps.app.goo.gl/jpSjoqwFMS75bUJu8"
-           target="_blank" rel="noopener noreferrer"
-           class="map-btn">
+        <a href="https://maps.app.goo.gl/yh5edhRDEwz8R6Ma6" target="_blank" rel="noopener noreferrer" class="map-btn">
           <span class="map-btn-icon">&#9654;</span>
           Abrir en Google Maps
         </a>
@@ -156,7 +166,6 @@
       <div class="slide-content countdown-slide">
 
         <div class="slide-eyebrow">Falta poco para el gran día</div>
-
         <h2 class="countdown-title">Nos casamos<br/><em>en&hellip;</em></h2>
 
         <div class="countdown-ring-wrap" aria-hidden="true">
@@ -166,35 +175,27 @@
 
         <div class="countdown-grid" aria-live="polite">
           <div class="count-cell">
-            <div class="count-box">
-              <span class="count-num" id="c-days">00</span>
-            </div>
+            <div class="count-box"><span class="count-num" id="c-days">00</span></div>
             <span class="count-lbl">Días</span>
           </div>
           <span class="count-sep">:</span>
           <div class="count-cell">
-            <div class="count-box">
-              <span class="count-num" id="c-hours">00</span>
-            </div>
+            <div class="count-box"><span class="count-num" id="c-hours">00</span></div>
             <span class="count-lbl">Horas</span>
           </div>
           <span class="count-sep">:</span>
           <div class="count-cell">
-            <div class="count-box">
-              <span class="count-num" id="c-minutes">00</span>
-            </div>
+            <div class="count-box"><span class="count-num" id="c-minutes">00</span></div>
             <span class="count-lbl">Minutos</span>
           </div>
           <span class="count-sep">:</span>
           <div class="count-cell">
-            <div class="count-box">
-              <span class="count-num" id="c-seconds">00</span>
-            </div>
+            <div class="count-box"><span class="count-num" id="c-seconds">00</span></div>
             <span class="count-lbl">Segundos</span>
           </div>
         </div>
 
-        <p class="countdown-date-lbl">09 de Mayo, 2026 &nbsp;·&nbsp; 5:00 pm</p>
+        <p class="countdown-date-lbl">09 de Mayo, 2026 &nbsp;·&nbsp; 3:00 pm</p>
 
       </div>
     </section>
@@ -204,7 +205,6 @@
       <div class="slide-content form-slide">
 
         <div class="slide-eyebrow">Confirmación de Asistencia</div>
-
         <h2 class="form-title">¿Deseas confirmar<br/>tu asistencia?</h2>
         <p class="form-sub">Tu presencia es el mejor regalo para nosotros</p>
 
@@ -212,8 +212,7 @@
           <div class="field-group">
             <label for="familia" class="field-label">Nombre de Familia</label>
             <div class="input-wrap">
-              <input type="text" id="familia" class="field-input"
-                     placeholder="Ej. Familia García" autocomplete="off" />
+              <input type="text" id="familia" class="field-input" placeholder="Ej. Familia García" autocomplete="off" />
               <span class="input-accent"></span>
             </div>
           </div>
@@ -222,14 +221,10 @@
             <label for="cantidad" class="field-label">Número de Invitados</label>
             <div class="select-wrap">
               <select id="cantidad" class="field-select">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
+                <option value="0">0</option><option value="1">1</option>
+                <option value="2">2</option><option value="3">3</option>
+                <option value="4">4</option><option value="5">5</option>
+                <option value="6">6</option><option value="7">7</option>
               </select>
               <span class="select-arrow">&#8964;</span>
             </div>
@@ -241,17 +236,12 @@
             <span class="btn-shimmer"></span>
             &#10003;&nbsp; Confirmar Asistencia
           </button>
-
           <button class="btn-decline" id="btnDecline">
             &#10007;&nbsp; No podré asistir
           </button>
-
-          <p class="sending-msg" id="sendingMsg" style="display:none">
-            Enviando confirmación&hellip;
-          </p>
+          <p class="sending-msg" id="sendingMsg" style="display:none">Enviando confirmación&hellip;</p>
         </div>
 
-        <!-- Éxito -->
         <div class="success-card" id="successCard" style="display:none">
           <div class="success-glow"></div>
           <div class="success-icon" id="successIcon">💌</div>
@@ -261,9 +251,9 @@
       </div>
     </section>
 
-  </div><!-- /slides-wrapper -->
+  </div>
 
-  <!-- ── Reproductor Spotify flotante ── -->
+  <!-- ══ SPOTIFY ══ -->
   <div class="spotify-player" id="spotifyPlayer">
     <div class="spotify-toggle" id="spotifyToggle" aria-label="Mostrar/ocultar música">
       <span class="spotify-note">♪</span>
@@ -272,13 +262,9 @@
     <div class="spotify-inner" id="spotifyInner">
       <p class="spotify-label">🎵 Nuestra canción</p>
       <iframe
-        data-testid="embed-iframe"
         style="border-radius:8px; display:block;"
         src="https://open.spotify.com/embed/track/5CXiQEgUzpftfFbl5h0AU3?utm_source=generator&theme=0"
-        width="100%"
-        height="80"
-        frameBorder="0"
-        allowfullscreen=""
+        width="100%" height="80" frameBorder="0" allowfullscreen=""
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"
       ></iframe>
