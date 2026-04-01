@@ -240,7 +240,7 @@ function showSuccess(familia, asiste) {
   if (formWrap) formWrap.style.display = 'none';
   if (asiste === 'Sí') {
     if (successIcon) successIcon.textContent = '🎊';
-    if (successText) successText.innerHTML = `¡Gracias, <em>Familia ${escHtml(familia)}</em>!<br>Estamos emocionados de celebrar este día con ustedes.`;
+    if (successText) successText.innerHTML = `¡Gracias, <em>Familia ${escHtml(familia)}</em>!<br>Estamos emocionados de celebrar este día con ustedes. Agradecemos su regalo en efectivo.`;
   } else {
     if (successIcon) successIcon.textContent = '💛';
     if (successText) successText.innerHTML = `Gracias, <em>Familia ${escHtml(familia)}</em>.<br>Los tendremos presentes en nuestro corazón.`;
