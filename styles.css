@@ -1,8 +1,7 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@200;300;400&display=swap');
 
 /* ══════════════════════════════════════
-   Fuentes
+   TOKENS
 ══════════════════════════════════════ */
 :root {
   --gold-1:    #C9A84C;
@@ -144,6 +143,62 @@ body::before {
 /* ══════════════════════════════════════
    SLIDE 1 · PORTADA
 ══════════════════════════════════════ */
+/* ── Bendición y familias ── */
+.familia-blessing {
+  margin-bottom: .9rem;
+  text-align: center;
+}
+
+.blessing-text {
+  font-family: var(--ff-body);
+  font-style: italic;
+  font-size: clamp(.90rem, 2.2vw, 1rem);
+  color: var(--ink-soft);
+  letter-spacing: .03em;
+  margin-bottom: .75rem;
+  line-height: 1.5;
+}
+
+.familia-cols {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: clamp(.6rem, 2vw, 1.4rem);
+}
+
+.familia-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .1rem;
+}
+
+.familia-name {
+  font-family: var(--ff-display);
+  font-weight: 400;
+  font-size: clamp(.72rem, 1.8vw, .9rem);
+  color: var(--ink-mid);
+  line-height: 1.4;
+}
+
+.familia-rol {
+  font-family: var(--ff-caps);
+  font-size: .70rem;
+  font-weight: 300;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--gold-1);
+  margin-top: .25rem;
+}
+
+.familia-div {
+  font-size: .55rem;
+  color: var(--gold-2);
+  padding-top: .35rem;
+  flex-shrink: 0;
+}
+
+/* ── Badge ── */
 .portada-badge {
   display:flex; align-items:center; justify-content:center; gap:.9rem;
   font-family:var(--ff-caps); font-size:.55rem; font-weight:200;
@@ -298,11 +353,11 @@ body::before {
 .date-block { display:flex; flex-direction:column; align-items:center; gap:.2rem; margin:.3rem 0 0; }
 .date {
   font-family:var(--ff-caps); font-weight:300;
-  font-size:clamp(1.5rem,3.5vw,1.9rem); letter-spacing:.35em; color:var(--ink-mid);
+  font-size:clamp(1.5rem,4vw,1.5rem); letter-spacing:.35em; color:var(--ink-mid);
 }
 .time-text {
   font-family:var(--ff-body); font-style:italic;
-  font-size:clamp(1.5rem,3.9vw,1.9rem); color:var(--gold-1); letter-spacing:.1em;
+  font-size:clamp(2rem,3.5vw,2rem); color:var(--gold-1); letter-spacing:.1em;
 }
 
 .scroll-cta {
@@ -459,7 +514,7 @@ body::before {
   animation:sepBlink 2s step-end infinite;
 }
 @keyframes sepBlink { 0%,100%{opacity:1} 50%{opacity:.3} }
-.countdown-date-lbl { font-family:var(--ff-caps); font-size:1rem; font-weight:300; letter-spacing:.3em; text-transform:uppercase; color:var(--ink-soft); }
+.countdown-date-lbl { font-family:var(--ff-caps); font-size:1rem; font-weight:200; letter-spacing:.3em; text-transform:uppercase; color:var(--ink-soft); }
 
 /* ══════════════════════════════════════
    SLIDE 5 · FORMULARIO
