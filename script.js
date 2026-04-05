@@ -257,10 +257,6 @@ async function submit(asiste) {
   showError('');
   if (!familia) { showError('Por favor ingresa el nombre de tu familia.'); if (familiaEl) familiaEl.focus(); return; }
 
-  if (APPS_SCRIPT_URL === 'PEGA_AQUI_TU_URL_DE_GOOGLE_APPS_SCRIPT') {
-    console.warn('[DEV] URL no configurada — simulando envío.');
-    showSuccess(familia, asiste); return;
-  }
 
   setBtns(true);
   try {
