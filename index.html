@@ -59,7 +59,7 @@
 
         <div class="portada-badge">
           <span class="badge-line"></span>
-          <span class="badge-text">Los invitamos a celebrar</span>
+          <span class="badge-text">Os invitamos a celebrar</span>
           <span class="badge-line"></span>
         </div>
 
@@ -230,7 +230,7 @@
           <div class="field-group">
             <label for="familia" class="field-label">Nombre de Familia</label>
             <div class="input-wrap">
-              <input type="text" id="familia" class="field-input" placeholder="Nombres y Apellidos" autocomplete="off" />
+              <input type="text" id="familia" class="field-input" placeholder="Ej. Familia García" autocomplete="off" />
               <span class="input-accent"></span>
             </div>
           </div>
@@ -271,7 +271,26 @@
 
   </div>
 
-  <!-- ══ SPOTIFY ══ -->
+  <!-- ══ MODAL REGALO ══ -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box">
+      <div class="modal-gem" aria-hidden="true">&#10022;</div>
+      <h3 class="modal-title">Antes de confirmar</h3>
+      <div class="modal-divider"></div>
+      <p class="modal-text">
+        Su presencia es nuestro mayor regalo.<br/>
+        Si desean obsequiarnos algo,<br/>
+        <strong>agradecemos su regalo en efectivo.</strong>
+      </p>
+      <div class="modal-divider"></div>
+      <div class="modal-btns">
+        <button class="modal-btn-confirm" id="modalConfirm">Entendido, confirmar</button>
+        <button class="modal-btn-cancel" id="modalCancel">Regresar</button>
+      </div>
+    </div>
+  </div>
+
+
   <div class="spotify-player" id="spotifyPlayer">
     <div class="spotify-toggle" id="spotifyToggle" aria-label="Mostrar/ocultar música">
       <span class="spotify-note">♪</span>

@@ -1,5 +1,8 @@
 'use strict';
 
+/* ══════════════════════════════════════
+   CONFIGURACIÓN
+══════════════════════════════════════ */
 const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyVjhlEUq7rE6kIEN0abimNN3rW0WZmPgLKiC-lJUa1Kij3KfnAj7CirefAigHiJ1dR/exec';
 
 /* ══════════════════════════════════════
@@ -240,7 +243,7 @@ function showSuccess(familia, asiste) {
   if (formWrap) formWrap.style.display = 'none';
   if (asiste === 'Sí') {
     if (successIcon) successIcon.textContent = '🎊';
-    if (successText) successText.innerHTML = `¡Gracias, <em>Familia ${escHtml(familia)}</em>!<br>Estamos emocionados de celebrar este día con ustedes. Agradecemos su regalo en efectivo.`;
+    if (successText) successText.innerHTML = `¡Gracias, <em>Familia ${escHtml(familia)}</em>!<br>Estamos emocionados de celebrar este día con ustedes.`;
   } else {
     if (successIcon) successIcon.textContent = '💛';
     if (successText) successText.innerHTML = `Gracias, <em>Familia ${escHtml(familia)}</em>.<br>Los tendremos presentes en nuestro corazón.`;
@@ -257,6 +260,10 @@ async function submit(asiste) {
   showError('');
   if (!familia) { showError('Por favor ingresa el nombre de tu familia.'); if (familiaEl) familiaEl.focus(); return; }
 
+  if (APPS_SCRIPT_URL === 'PEGA_AQUI_TU_URL_DE_GOOGLE_APPS_SCRIPT') {
+    console.warn('[DEV] URL no configurada — simulando envío.');
+    showSuccess(familia, asiste); return;
+  }
 
   setBtns(true);
   try {
@@ -268,8 +275,25 @@ async function submit(asiste) {
   }
 }
 
-if (btnConfirm) btnConfirm.addEventListener('click', () => submit('Sí'));
+if (btnConfirm) btnConfirm.addEventListener('click', () => {
+  const overlay = document.getElementById('modalOverlay');
+  if (overlay) overlay.classList.add('open');
+});
 if (btnDecline) btnDecline.addEventListener('click', () => submit('No'));
+
+(function initModal() {
+  const overlay = document.getElementById('modalOverlay');
+  const btnOk   = document.getElementById('modalConfirm');
+  const btnBack = document.getElementById('modalCancel');
+  if (!overlay) return;
+
+  btnOk.addEventListener('click', () => {
+    overlay.classList.remove('open');
+    submit('Sí');
+  });
+  btnBack.addEventListener('click', () => overlay.classList.remove('open'));
+  overlay.addEventListener('click', e => { if (e.target === overlay) overlay.classList.remove('open'); });
+})();
 
 /* ══════════════════════════════════════
    SPOTIFY TOGGLE

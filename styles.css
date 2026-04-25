@@ -24,7 +24,7 @@
    BASE
 ══════════════════════════════════════ */
 *, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
-html { font-size:16px; -webkit-text-size-adjust:100%; }
+html { font-size:18px; -webkit-text-size-adjust:100%; }
 html, body { height:100%; overflow:hidden; }
 
 body {
@@ -134,7 +134,7 @@ body::before {
 }
 
 .slide-eyebrow {
-  font-family:var(--ff-caps); font-size:.58rem; font-weight:300;
+  font-family:var(--ff-caps); font-size:.72rem; font-weight:300;
   letter-spacing:.45em; text-transform:uppercase;
   color:var(--gold-1); margin-bottom:1rem; display:inline-block;
 }
@@ -152,11 +152,11 @@ body::before {
 .blessing-text {
   font-family: var(--ff-body);
   font-style: italic;
-  font-size: clamp(.90rem, 2.2vw, 1rem);
+  font-size: clamp(1rem, 2.4vw, 1.2rem);
   color: var(--ink-soft);
   letter-spacing: .03em;
   margin-bottom: .75rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .familia-cols {
@@ -176,14 +176,14 @@ body::before {
 .familia-name {
   font-family: var(--ff-display);
   font-weight: 400;
-  font-size: clamp(.72rem, 1.8vw, .9rem);
+  font-size: clamp(.9rem, 2.2vw, 1.1rem);
   color: var(--ink-mid);
   line-height: 1.4;
 }
 
 .familia-rol {
   font-family: var(--ff-caps);
-  font-size: .70rem;
+  font-size: .68rem;
   font-weight: 300;
   letter-spacing: .28em;
   text-transform: uppercase;
@@ -192,7 +192,7 @@ body::before {
 }
 
 .familia-div {
-  font-size: .55rem;
+  font-size: .7rem;
   color: var(--gold-2);
   padding-top: .35rem;
   flex-shrink: 0;
@@ -201,7 +201,7 @@ body::before {
 /* ── Badge ── */
 .portada-badge {
   display:flex; align-items:center; justify-content:center; gap:.9rem;
-  font-family:var(--ff-caps); font-size:.55rem; font-weight:200;
+  font-family:var(--ff-caps); font-size:.68rem; font-weight:200;
   letter-spacing:.35em; text-transform:uppercase;
   color:var(--ink-soft); margin-bottom:1rem;
 }
@@ -353,11 +353,11 @@ body::before {
 .date-block { display:flex; flex-direction:column; align-items:center; gap:.2rem; margin:.3rem 0 0; }
 .date {
   font-family:var(--ff-caps); font-weight:300;
-  font-size:clamp(1.5rem,4vw,1.5rem); letter-spacing:.35em; color:var(--ink-mid);
+  font-size:clamp(1rem, 3.5vw, 1.4rem); letter-spacing:.35em; color:var(--ink-mid);
 }
 .time-text {
   font-family:var(--ff-body); font-style:italic;
-  font-size:clamp(2rem,3.5vw,2rem); color:var(--gold-1); letter-spacing:.1em;
+  font-size:clamp(1.3rem, 4vw, 1.8rem); color:var(--gold-1); letter-spacing:.1em;
 }
 
 .scroll-cta {
@@ -397,11 +397,11 @@ body::before {
 }
 .verse {
   font-family:var(--ff-body); font-weight:300; font-style:italic;
-  font-size:clamp(.95rem,2.4vw,1.1rem); line-height:1.75; color:var(--ink-mid); text-align:left;
+  font-size:clamp(1.1rem,2.8vw,1.3rem); line-height:1.85; color:var(--ink-mid); text-align:left;
 }
 .verse em { color:var(--gold-dark); font-style:italic; }
 .verse-cite {
-  display:block; font-family:var(--ff-caps); font-size:.58rem;
+  display:block; font-family:var(--ff-caps); font-size:.72rem;
   letter-spacing:.4em; text-transform:uppercase; color:var(--gold-1);
   font-style:normal; margin-top:1.2rem; text-align:right;
 }
@@ -418,7 +418,7 @@ body::before {
 .venue-details { display:flex; flex-direction:column; gap:.5rem; margin-bottom:1rem; }
 .venue-row {
   display:flex; align-items:flex-start; gap:.8rem;
-  font-family:var(--ff-body); font-size:clamp(.85rem,2vw,1rem);
+  font-family:var(--ff-body); font-size:clamp(1rem,2.4vw,1.2rem);
   color:var(--ink-mid); text-align:left;
   background:rgba(255,253,246,.6); border:1px solid var(--gold-4);
   border-radius:3px; padding:.6rem 1rem;
@@ -503,33 +503,33 @@ body::before {
 }
 .count-num {
   display:block; font-family:var(--ff-display); font-weight:400;
-  font-size:clamp(1.9rem,6.5vw,4.2rem); color:var(--ink); line-height:1; text-align:center;
+  font-size:clamp(2.4rem,8vw,5rem); color:var(--ink); line-height:1; text-align:center;
   transition:color .2s, transform .2s;
 }
 .count-num.tick { color:var(--gold-1); transform:scale(1.05); }
-.count-lbl { font-family:var(--ff-caps); font-size:.5rem; font-weight:300; letter-spacing:.35em; text-transform:uppercase; color:var(--gold-1); }
+.count-lbl { font-family:var(--ff-caps); font-size:.65rem; font-weight:300; letter-spacing:.35em; text-transform:uppercase; color:var(--gold-1); }
 .count-sep {
-  font-family:var(--ff-display); font-size:clamp(1.5rem,4.5vw,3rem);
+  font-family:var(--ff-display); font-size:clamp(1.8rem,5.5vw,3.5rem);
   color:var(--gold-3); font-weight:300; align-self:flex-start; padding-top:.15em; line-height:1;
   animation:sepBlink 2s step-end infinite;
 }
 @keyframes sepBlink { 0%,100%{opacity:1} 50%{opacity:.3} }
-.countdown-date-lbl { font-family:var(--ff-caps); font-size:1rem; font-weight:200; letter-spacing:.3em; text-transform:uppercase; color:var(--ink-soft); }
+.countdown-date-lbl { font-family:var(--ff-caps); font-size:.8rem; font-weight:300; letter-spacing:.28em; text-transform:uppercase; color:var(--ink-soft); }
 
 /* ══════════════════════════════════════
    SLIDE 5 · FORMULARIO
 ══════════════════════════════════════ */
-.form-title { font-family:var(--ff-display); font-weight:400; font-size:clamp(1.5rem,4.5vw,2.4rem); color:var(--ink); line-height:1.2; margin-bottom:.6rem; }
-.form-sub { font-family:var(--ff-body); font-style:italic; font-size:clamp(.88rem,2.2vw,1.05rem); color:var(--ink-soft); margin-bottom:1.2rem; }
+.form-title { font-family:var(--ff-display); font-weight:400; font-size:clamp(1.7rem,5vw,2.6rem); color:var(--ink); line-height:1.2; margin-bottom:.6rem; }
+.form-sub { font-family:var(--ff-body); font-style:italic; font-size:clamp(1.05rem,2.6vw,1.25rem); color:var(--ink-soft); margin-bottom:1.2rem; }
 .form-wrap { max-width:400px; margin:0 auto; text-align:left; }
 .field-group { margin-bottom:1rem; }
-.field-label { display:block; font-family:var(--ff-caps); font-size:.55rem; font-weight:300; letter-spacing:.3em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:.4rem; }
+.field-label { display:block; font-family:var(--ff-caps); font-size:.65rem; font-weight:300; letter-spacing:.3em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:.4rem; }
 
 .input-wrap { position:relative; }
 .field-input {
-  width:100%; padding:.7rem 1rem; border:1px solid var(--gold-3);
+  width:100%; padding:.75rem 1rem; border:1px solid var(--gold-3);
   background:rgba(255,253,246,.8); color:var(--ink);
-  font-family:var(--ff-body); font-size:1.05rem; outline:none;
+  font-family:var(--ff-body); font-size:1.2rem; outline:none;
   border-radius:3px; transition:border-color .25s, box-shadow .25s; -webkit-appearance:none;
 }
 .input-accent {
@@ -543,9 +543,9 @@ body::before {
 
 .select-wrap { position:relative; }
 .field-select {
-  width:100%; padding:.7rem 2.5rem .7rem 1rem; border:1px solid var(--gold-3);
+  width:100%; padding:.75rem 2.5rem .75rem 1rem; border:1px solid var(--gold-3);
   background:rgba(255,253,246,.8); color:var(--ink);
-  font-family:var(--ff-body); font-size:1.05rem; outline:none;
+  font-family:var(--ff-body); font-size:1.2rem; outline:none;
   border-radius:3px; -webkit-appearance:none; appearance:none;
   cursor:pointer; transition:border-color .25s, box-shadow .25s;
 }
@@ -584,6 +584,98 @@ body::before {
 .success-icon { font-size:3.8rem; margin-bottom:1.3rem; animation:popIn .5s cubic-bezier(.175,.885,.32,1.275) forwards; }
 @keyframes popIn { from{transform:scale(0);opacity:0} to{transform:scale(1);opacity:1} }
 .success-text { font-family:var(--ff-body); font-style:italic; font-size:clamp(1rem,2.8vw,1.2rem); color:var(--ink-mid); line-height:1.9; }
+
+/* ══════════════════════════════════════
+   MODAL REGALO
+══════════════════════════════════════ */
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(44,31,14,.55);
+  backdrop-filter: blur(6px);
+  z-index: 500;
+  display: flex; align-items: center; justify-content: center;
+  padding: 1.5rem;
+  opacity: 0; pointer-events: none;
+  transition: opacity .35s var(--ease);
+}
+.modal-overlay.open { opacity: 1; pointer-events: all; }
+
+.modal-box {
+  background: var(--cream);
+  border: 1px solid var(--gold-2);
+  border-radius: 6px;
+  padding: 2.2rem 2rem 1.8rem;
+  max-width: 360px; width: 100%;
+  text-align: center;
+  position: relative;
+  box-shadow:
+    0 24px 60px rgba(44,31,14,.22),
+    inset 0 0 0 1px rgba(255,255,255,.7);
+  transform: translateY(20px) scale(.97);
+  transition: transform .35s var(--ease);
+}
+.modal-overlay.open .modal-box { transform: translateY(0) scale(1); }
+
+.modal-gem {
+  color: var(--gold-1); font-size: 1.1rem;
+  margin-bottom: .9rem;
+  animation: gemPulse 3s ease-in-out infinite;
+}
+
+.modal-title {
+  font-family: var(--ff-display);
+  font-weight: 400;
+  font-size: clamp(1.2rem, 3.5vw, 1.55rem);
+  color: var(--ink);
+  margin-bottom: .8rem;
+}
+
+.modal-divider {
+  width: 60%; margin: 0 auto .9rem;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold-2), transparent);
+}
+
+.modal-text {
+  font-family: var(--ff-body);
+  font-style: italic;
+  font-size: clamp(.95rem, 2.5vw, 1.1rem);
+  color: var(--ink-mid);
+  line-height: 1.8;
+  margin-bottom: .9rem;
+}
+.modal-text strong {
+  font-style: normal;
+  color: var(--gold-dark);
+  font-weight: 600;
+  font-size: 1.05em;
+}
+
+.modal-btns {
+  display: flex; flex-direction: column; gap: .7rem; margin-top: 1rem;
+}
+
+.modal-btn-confirm {
+  width: 100%; padding: .85rem 1.5rem;
+  background: linear-gradient(135deg, var(--gold-1) 0%, var(--gold-dark) 100%);
+  color: var(--white); border: none; border-radius: 3px;
+  font-family: var(--ff-caps); font-size: .64rem;
+  font-weight: 400; letter-spacing: .22em; text-transform: uppercase;
+  cursor: pointer; position: relative; overflow: hidden;
+  box-shadow: 0 4px 18px rgba(201,168,76,.35);
+  transition: transform .25s, box-shadow .25s;
+}
+.modal-btn-confirm:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,168,76,.45); }
+
+.modal-btn-cancel {
+  width: 100%; padding: .65rem 1.5rem;
+  background: transparent; border: 1px solid var(--gold-3);
+  color: var(--ink-soft); border-radius: 3px;
+  font-family: var(--ff-caps); font-size: .62rem;
+  letter-spacing: .2em; text-transform: uppercase; cursor: pointer;
+  transition: border-color .25s, color .25s;
+}
+.modal-btn-cancel:hover { border-color: var(--ink-soft); color: var(--ink); }
 
 /* ══════════════════════════════════════
    NAVEGACIÓN
